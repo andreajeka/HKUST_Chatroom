@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<chatroom>
+  <users><user name="Andrea"/><user name="Andrea"/></users>
+  <messages><message name="Andrea">Hi, my name is Andrea.</message></messages>
+</chatroom>
