@@ -55,7 +55,8 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                 clearTimeout("load()", 100);
             }
         }
-
+            
+        // create a HTTP request object
         function getUpdate() {
             //request = new ActiveXObject("Microsoft.XMLHTTP");
             request =new XMLHttpRequest();
@@ -64,7 +65,8 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.send("datasize=" + datasize);
         }
-
+        
+        // parse XML message to DOM
         function stateChange() {
             if (request.readyState == 4 && request.status == 200 && request.responseText) {
                 var xmlDoc;
@@ -80,14 +82,19 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                 getUpdate();
             }
         }
-
+            
+        // update the chat area
         function updateChat(xmlDoc) {
 
             //point to the message nodes
             var messages = xmlDoc.getElementsByTagName("message");
-
+            var msgArray = [];
             // create a string for the messages
-            /* Add your code here */
+            for (var i = lastMsgID; i < messages.length; i++) {
+                var msg = messages.item(i);
+                showMessage(msg.getAttribute("name"), msg.textContent);
+            }
+            lastMsgID = messages.length;
         }
 
         function showMessage(nameStr, contentStr){

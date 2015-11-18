@@ -17,19 +17,26 @@
         
         //username input checking
        function checkInput() {
-            //username cannot be empty
-
-
-
-            //username cannot contain illeagl character
+           var nameInput = document.forms[0]["name"].value;
+           // username cannot be empty
+           if (nameInput.length == 0) {
+               alert("Please enter a name!");
+               return false;
+           }
            
+           // username cannot contain illegal character
+           var regex = /^[a-z0-9]{3,10}/i;
+           if (!regex.test(nameInput)) {
+               alert("Illegal user name! Your user name can contain only letters (a-z A-Z), numbers(0,9), underscores(_) with no space");
+               return false;
+           }
+           return true;
         }
-        
         </script>
     </head>
 
     <body onload="clearMessage()">
-        <form method="post" action="login.php" onsubmit="javascript:checkInput()">
+        <form method="post" action="login.php" onsubmit="javascript: return checkInput()">
             <table border="0" cellpadding="5" cellspacing="0">
                 <tr>
                     <td>Please enter your user name:</td>

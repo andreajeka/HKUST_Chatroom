@@ -20,10 +20,6 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         //<![CDATA[
         function load() {
             var name = "<?php print $name; ?>";
-
-            //delete this line 
-            //window.parent.frames["message"].document.getElementById("username").setAttribute("value", name)
-
             setTimeout("document.getElementById('msg').focus()",100);
         }
         //]]>
