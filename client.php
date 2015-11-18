@@ -22,6 +22,10 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             var name = "<?php print $name; ?>";
             setTimeout("document.getElementById('msg').focus()",100);
         }
+
+        function setMsgColor(color) {
+            document.getElementById("textcolor").value = color;
+        }
         //]]>
         </script>
     </head>
@@ -37,6 +41,17 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                 </tr>
                 <tr>
                     <td><input class="button" type="submit" value="Send Your Message" style="width: 200px" /></td>
+                </tr>
+                <tr>
+                    <div class="colorChooser">
+                        <div class="chooseColorText"><p>Choose your color:</p></div>
+                        <div class="colorBoxes">
+                            <div class="colorBox" onclick="setMsgColor('#13b4ff')" style="background-color:#13b4ff;"></div>
+                            <div class="colorBox" onclick="setMsgColor('#ab3fdd')" style="background-color:#ab3fdd;"></div>
+                            <div class="colorBox" onclick="setMsgColor('#ae163e')" style="background-color:#ae163e;"></div>
+                        </div>
+                    </div>
+                     <input type="hidden" name="textcolor" id="textcolor" value="black" />
                 </tr>
             </table>
         </form>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <chatroom>
-  <users><user name="adfadfa"/><user name="aZasi"/></users>
-  <messages><message name="adfadfa">Hi, my name is Andrea.</message><message name="aZasi">Hi, I am not Andrea</message></messages>
+  <users><user name="andrea"/></users>
+  <messages><message name="andrea" textcolor="#13b4ff">AAA</message><message name="andrea" textcolor="#ab3fdd">Hi, my name is Andrea.</message></messages>
 </chatroom>

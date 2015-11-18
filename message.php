@@ -92,12 +92,12 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             // create a string for the messages
             for (var i = lastMsgID; i < messages.length; i++) {
                 var msg = messages.item(i);
-                showMessage(msg.getAttribute("name"), msg.textContent);
+                showMessage(msg.getAttribute("name"), msg.textContent, msg.getAttribute("textcolor"));
             }
             lastMsgID = messages.length;
         }
 
-        function showMessage(nameStr, contentStr){
+        function showMessage(nameStr, contentStr, textcolor){
                
                 var node = document.getElementById("chattext");
                 // Create the name text span
@@ -112,14 +112,15 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                 node.appendChild(nameNode);
 
                 // Create the score text span
-                var conetentNode = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+                var contentNode = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
 
                 // Set the attributes and create the text
-                conetentNode.setAttribute("x", 200);
-                conetentNode.appendChild(document.createTextNode(contentStr));
+                contentNode.setAttribute("x", 200);
+                contentNode.setAttribute("fill", textcolor);
+                contentNode.appendChild(document.createTextNode(contentStr));
 
                 // Add the name to the text node
-                node.appendChild(conetentNode);
+                node.appendChild(contentNode);
         }
 
         //]]>

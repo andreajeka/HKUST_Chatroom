@@ -25,3 +25,28 @@ input.button {
     border-left: 1px solid gray;
     background: lightgray;
 }
+
+.colorChooser {
+    width: 500px;
+    position: absolute;
+    left : 240px;
+    top: 48px;
+
+}
+
+.colorBoxes {
+    position: relative;
+    left: 150px;
+    top: -35px;
+}
+
+.colorBox {
+    width: 20px;
+    height: 20px;
+    float:left;
+    margin: 0px 5px 5px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
+    cursor: pointer;
+}
