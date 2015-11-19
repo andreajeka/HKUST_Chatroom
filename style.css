@@ -26,6 +26,41 @@ input.button {
     background: lightgray;
 }
 
+.picture {
+    position: relative;
+    top:-5px;
+    left:46px;
+}
+
+#file-upload {
+    position: absolute;
+    left: -9999px;
+}
+
+label[for="file-upload"]{
+  position: relative;
+  left: 5px;
+  display:inline-block;
+  padding:0.25em;  
+  background-color:black;
+  color: white;
+  cursor:pointer;
+}
+
+label[for="file-upload"]:hover{
+  background-color:grey;
+}
+
+#filename{
+  padding:0.2em;
+  float:left;
+  width:200px;
+  white-space: nowrap;
+  overflow:hidden;
+  background-color:white;
+  border:1px solid black;
+}
+
 .colorChooser {
     width: 500px;
     position: absolute;
@@ -49,4 +84,39 @@ input.button {
     border-style: solid;
     border-color: rgba(0,0,0,.2);
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.colorBox:after {
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.colorBox-style {
+    background: #cb4e4e;
+    color: #fff;
+    box-shadow: 0 6px #ab3c3c;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.colorBox-effect {
+    border-radius: 3px;
+    box-shadow: 3px 3px #999999;
+}
+
+.colorBox-effect:hover {
+    box-shadow: 2px 2px #999999;
+    left: 2px;
+}
+
+.colorBox-effect:active {
+    box-shadow: 0 0 #999999;
+    border-color: rgb(255,255,255);
+    border-width: 2px;
 }

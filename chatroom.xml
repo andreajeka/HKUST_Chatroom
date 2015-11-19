@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <chatroom>
-  <users><user name="andrea"/></users>
-  <messages><message name="andrea" textcolor="#13b4ff">AAA</message><message name="andrea" textcolor="#ab3fdd">Hi, my name is Andrea.</message></messages>
+  <users><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/></users>
+  <messages><message name="andrea" textcolor="#13b4ff">AAA</message><message name="andrea" textcolor="#ab3fdd">Hi, my name is Andrea.</message><message name="andrea" textcolor="#ffa500">adfafa</message><message name="andrea" textcolor="#00ff00">How are you?</message><message name="andrea" textcolor="black">adfadf</message><message name="andrea" textcolor="#13b4ff">dfa</message><message name="andrea" textcolor="#ab3fdd">dafad</message></messages>
 </chatroom>
