@@ -33,17 +33,20 @@
 
            // user has to upload a picture
            var upload = document.forms[0]["file-upload"].value;
-           if (upload = "") {
-                alert("Please upload a photo!");
-                return false;
-           } else {
-                var extension = upload.substring(upload.lastIndexOf('.') + 1).toLowerCase();
-                if (!(extension == "gif" || extension == "png" || extension == "bmp" || extension == "jpg" || extension == "jpeg")) {
-                      alert("You can only upload pictures with format gif, png, bmp, jpg/jpeg!");
-                      return false;
-                }
+           if (upload == "") {
+              alert("Please upload a photo!");
+              return false;
            }
 
+           var extension = upload.substring(upload.lastIndexOf('.') + 1).toUpperCase();
+           console.log(extension);
+           if (!(extension == "GIF" || extension == "PNG" || 
+                 extension == "BMP" || extension == "JPG" || 
+                 extension == "JPEG")) {
+                  alert("You can only upload pictures with format GIF, PNG, BMP, JPG/JPEG!");
+                  return false;
+           }
+           
            return true;
         }
         </script>
