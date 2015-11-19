@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <chatroom>
-  <users><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/><user name="andrea"/></users>
-  <messages><message name="andrea" textcolor="#ae163e">Hi, my name is Andrea. Please visit my website at http://andreajeka.com/</message><message name="andrea" textcolor="#ab3fdd">Hi try http://www.google.com</message><message name="andrea" textcolor="#33ffff">Testing</message></messages>
+  <users></users>
+  <messages></messages>
 </chatroom>

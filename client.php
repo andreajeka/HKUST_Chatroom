@@ -59,8 +59,20 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             </table>
         </form>
         
-        <!--logout button-->
-
-
+        <!--logout and userlist button-->
+        <table border="0" cellspacing="5" cellpadding="0">
+            <tr>
+                <td>
+                    <form action="userlist.php" method="post">
+                        <input class="button onlinelist" type="submit" value="Show Online User List" style="width: 200px"/>
+                    </form>
+                </td>
+                <td>
+                    <form action="logout.php" method="post" onsubmit="alert('Logged Out')">
+                        <input class="button logout" type="submit" value="Logout" style="width: 200px"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
