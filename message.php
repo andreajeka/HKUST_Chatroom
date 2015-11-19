@@ -32,8 +32,6 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             datasize = 0;
             lastMsgID = 0;
 
-
-            
             var node = document.getElementById("chatroom");
             node.style.setProperty("visibility", "visible", null);
 
@@ -98,29 +96,32 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         }
 
         function showMessage(nameStr, contentStr, textcolor){
-               
-                var node = document.getElementById("chattext");
-                // Create the name text span
-                var nameNode = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
 
-                // Set the attributes and create the text
-                nameNode.setAttribute("x", 100);
-                nameNode.setAttribute("dy", 20);
-                nameNode.appendChild(document.createTextNode(nameStr));
+                var node = document.getElementById("chatroom");
+                
+                // Create div element to contain one entry (name and message)
+                var oneEntryNode = document.createElement("div");
+                oneEntryNode.setAttribute("class", "oneEntry");
+              
 
-                // Add the name to the text node
-                node.appendChild(nameNode);
+                // Create the div element for name and put text
+                var nameNode = document.createElement("div");
+                nameNode.setAttribute("class", "nameEntry");
+                nameNode.appendChild(document.createTextNode(nameStr+":"));
+                oneEntryNode.appendChild(nameNode);
+                
+                // Replace all message that content hyperlinks with html links
+                contentStr = contentStr.replace(/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)/g,
+                    '<a target="blank" href="$1">$1</a>');
+                
+                // Create the div element for message and put text
+                var msgNode = document.createElement("div");
+                msgNode.setAttribute("class", "msgEntry");
+                msgNode.style.color = textcolor;
+                msgNode.innerHTML = contentStr;
+                oneEntryNode.appendChild(msgNode);
 
-                // Create the score text span
-                var contentNode = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-
-                // Set the attributes and create the text
-                contentNode.setAttribute("x", 200);
-                contentNode.setAttribute("fill", textcolor);
-                contentNode.appendChild(document.createTextNode(contentStr));
-
-                // Add the name to the text node
-                node.appendChild(contentNode);
+                node.appendChild(oneEntryNode);
         }
 
         //]]>
@@ -128,20 +129,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
     </head>
 
     <body style="text-align: left" onload="load()" onunload="unload()">
-    <svg width="800px" height="2000px"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     xmlns:a="http://www.adobe.com/svg10-extensions" a:timeline="independent"
-     >
-
-        <g id="chatroom" style="visibility:hidden">                
-        <rect width="520" height="2000" style="fill:white;stroke:red;stroke-width:2"/>
-        <text x="260" y="40" style="fill:red;font-size:30px;font-weight:bold;text-anchor:middle">Chat Window</text> 
-        <text id="chattext" y="45" style="font-size: 20px;font-weight:bold"/>
-      </g>
-  </svg>
-  
+         <div id="chatroom"></div>
          <form action="">
             <input type="hidden" value="<?php print $name; ?>" id="username" />
         </form>

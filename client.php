@@ -46,15 +46,15 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                     <div class="colorChooser">
                         <div class="chooseColorText"><p>Choose your color:</p></div>
                         <div class="colorBoxes">
-                            <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('black')" style="background-color:black;"></div>
-                            <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#13b4ff')" style="background-color:#13b4ff;"></div>
+                            <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('white')" style="background-color:white;"></div>
+                            <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#33ffff')" style="background-color:#33ffff;"></div>
                             <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#ab3fdd')" style="background-color:#ab3fdd;"></div>
                             <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#ae163e')" style="background-color:#ae163e;"></div>
                             <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#ffa500')" style="background-color:#ffa500;"></div>
                             <div class="colorBox colorBox-style colorBox-effect" onclick="setMsgColor('#00ff00')" style="background-color:#00ff00;"></div>
                         </div>
                     </div>
-                     <input type="hidden" name="textcolor" id="textcolor" value="black" />
+                     <input type="hidden" name="textcolor" id="textcolor" value="white" />
                 </tr>
             </table>
         </form>
