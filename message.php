@@ -86,7 +86,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 
             //point to the message nodes
             var messages = xmlDoc.getElementsByTagName("message");
-            var msgArray = [];
+            
             // create a string for the messages
             for (var i = lastMsgID; i < messages.length; i++) {
                 var msg = messages.item(i);
@@ -97,31 +97,31 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 
         function showMessage(nameStr, contentStr, textcolor){
 
-                var node = document.getElementById("chatroom");
-                
-                // Create div element to contain one entry (name and message)
-                var oneEntryNode = document.createElement("div");
-                oneEntryNode.setAttribute("class", "oneEntry");
-              
+            var node = document.getElementById("chatroom");
+            
+            // Create div element to contain one entry (name and message)
+            var oneEntryNode = document.createElement("div");
+            oneEntryNode.setAttribute("class", "oneEntry");
+          
 
-                // Create the div element for name and put text
-                var nameNode = document.createElement("div");
-                nameNode.setAttribute("class", "nameEntry");
-                nameNode.appendChild(document.createTextNode(nameStr+":"));
-                oneEntryNode.appendChild(nameNode);
-                
-                // Replace all message that content hyperlinks with html links
-                contentStr = contentStr.replace(/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)/g,
-                    '<a target="blank" href="$1">$1</a>');
-                
-                // Create the div element for message and put text
-                var msgNode = document.createElement("div");
-                msgNode.setAttribute("class", "msgEntry");
-                msgNode.style.color = textcolor;
-                msgNode.innerHTML = contentStr;
-                oneEntryNode.appendChild(msgNode);
+            // Create the div element for name and put text
+            var nameNode = document.createElement("div");
+            nameNode.setAttribute("class", "nameEntry");
+            nameNode.appendChild(document.createTextNode(nameStr+":"));
+            oneEntryNode.appendChild(nameNode);
+            
+            // Replace all message that content hyperlinks with html links
+            contentStr = contentStr.replace(/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)/g,
+                '<a target="blank" href="$1">$1</a>');
+            
+            // Create the div element for message and put text
+            var msgNode = document.createElement("div");
+            msgNode.setAttribute("class", "msgEntry");
+            msgNode.style.color = textcolor;
+            msgNode.innerHTML = contentStr;
+            oneEntryNode.appendChild(msgNode);
 
-                node.appendChild(oneEntryNode);
+            node.appendChild(oneEntryNode);
         }
 
         //]]>
@@ -129,7 +129,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
     </head>
 
     <body style="text-align: left" onload="load()" onunload="unload()">
-         <div id="chatroom"></div>
+         <div id="chatroom"/>
          <form action="">
             <input type="hidden" value="<?php print $name; ?>" id="username" />
         </form>

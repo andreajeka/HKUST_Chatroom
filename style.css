@@ -110,12 +110,12 @@ input.button.logout:hover, input.button.logout:active {
     left:45px;
 }
 
-#file-upload {
+#pic-upload {
     position: absolute;
     left: -9999px;
 }
 
-label[for="file-upload"]{
+label[for="pic-upload"]{
   position: relative;
   left: 5px;
   display:inline-block;
@@ -125,7 +125,7 @@ label[for="file-upload"]{
   cursor:pointer;
 }
 
-label[for="file-upload"]:hover{
+label[for="pic-upload"]:hover{
   background-color:grey;
 }
 

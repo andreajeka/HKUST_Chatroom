@@ -27,10 +27,18 @@ $user_element = $xmlh->addElement($users_element, "user");
 // add the user name
 $xmlh->setAttribute($user_element, "name", $_POST["name"]);
 
+// Picture arrangements, move uploaded file to webserver
+$pic_name = $_FILES["pic-upload"]["name"];
+$pic_tmp = $_FILES["pic-upload"]["tmp_name"];
+$pic_dir = "images/".$pic_name;
+move_uploaded_file($pic_tmp, $pic_dir);
+
+// add the picture dir
+$xmlh->setAttribute($user_element, "pic-upload", $pic_dir);
+
 // save the XML file
 $xmlh->saveFile();
 
-// set the name to the cookie
 setcookie("name", $_POST["name"]);
 
 // Cookie done, redirect to client.php (to avoid reloading of page from the client)

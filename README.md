@@ -8,9 +8,9 @@
 3. [x] Logging in - 14 Marks
     1. [x]  User enter name and upload picture
     2. [x]  Error shown for incorrect input
-4. [ ] Logging Out - 8 Marks
-    1. [ ] Log out button - 3 marks
-    2. [ ] Browser returns to login page - 5 marks
+4. [x] Logging Out - 8 Marks
+    1. [x] Log out button - 3 marks
+    2. [x] Browser returns to login page - 5 marks
 5. [x] Chat Message Input - 8 Marks
 6. [x] Select Message Colour - 16 Marks
     1. [x] At least 6 colors - 4 marks
@@ -21,8 +21,8 @@
  	1. [x] Hyperlink displayd as underlined - 6 marks
     2. [x] Click and display in new window - 8 marks
 8. [ ] Online User List - 18 Marks
-	1. [ ] Click on a button to show user list - 2 marks
-    2. [ ] List is shown in new window - 4 marks
-    3. [ ] List by their names - 5 marks
-    4. [ ] List by uploaded pics also - 7 marks
+	1. [x] Click on a button to show user list - 2 marks
+    2. [x] List is shown in new window - 4 marks
+    3. [x] List by their names - 5 marks
+    4. [x] List by uploaded pics also - 7 marks
     5. [ ] Updated when log in or out of the chatroom

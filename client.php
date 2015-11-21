@@ -4,7 +4,6 @@ if (!isset($_COOKIE["name"])) {
     header("Location: error.html");
     return;
 }
-
 // get the name from cookie
 $name = $_COOKIE["name"];
 
@@ -20,6 +19,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         //<![CDATA[
         function load() {
             var name = "<?php print $name; ?>";
+            window.parent.frames["message"].document.getElementById("username").setAttribute("value", name)
             setTimeout("document.getElementById('msg').focus()",100);
         }
 
@@ -63,7 +63,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         <table border="0" cellspacing="5" cellpadding="0">
             <tr>
                 <td>
-                    <form action="userlist.php" method="post">
+                    <form onsubmit="window.open('userlist.php','newWindow','width=450,height=550')">
                         <input class="button onlinelist" type="submit" value="Show Online User List" style="width: 200px"/>
                     </form>
                 </td>

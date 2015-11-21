@@ -53,7 +53,7 @@
     </head>
 
     <body onload="clearMessage()">
-        <form method="post" action="login.php" onsubmit="javascript: return checkInput()">
+        <form method="post" action="login.php" onsubmit="javascript: return checkInput()" enctype="multipart/form-data">
             <table border="0" cellpadding="5" cellspacing="0">
                 <tr>
                     <td>Please enter your user name:</td>
@@ -64,7 +64,7 @@
                     <td>
                       <div class="picture">
                         <span id="filename">Select your file</span>
-                        <label for="file-upload">Browse<input type="file" name="file-upload" id="file-upload"></label>
+                        <label for="pic-upload">Browse<input type="file" name="pic-upload" id="pic-upload"></label>
                       </div
                     </td>
                 <tr align="center">
@@ -73,7 +73,7 @@
             </table>
         </form>
         <script>
-          document.getElementById("file-upload").onchange =
+          document.getElementById("pic-upload").onchange =
           function() {
             var filepath = this.value;
             var m = filepath.match(/([^\/\\]+)$/);

@@ -16,6 +16,7 @@ if (!$xmlh->fileExist()) {
 
 // get user name from cookie
 $name = $_COOKIE["name"];
+print($name);
 
 // open the existing XML file
 $xmlh->openFile();
@@ -24,11 +25,11 @@ $xmlh->openFile();
 $users_element = $xmlh->getElement("users");
 
 // get all 'user' nodes
-$users_array = $xmlh->getChildNodes("user");
+$user_element = $xmlh->getChildNodes("user");
 
-if($users_array != null) {
+if($user_element != null) {
     // delete the current user from the users element
-    foreach ($users_array as $user) {
+    foreach ($user_element as $user) {
         $username = $xmlh->getAttribute($user, "name");
         if ($username == $name)
             $xmlh->removeElement($users_element, $user);
