@@ -33,11 +33,12 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.send("datasize=" + datasize);
         }
+
         function stateChange() {
             if (request.readyState == 4 && request.status == 200 && request.responseText) {
                 var xmlDoc;
                 try {
-                    xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                    xmlDoc = new XMLHttpRequest();
                     xmlDoc.loadXML(request.responseText);
                 } catch (e) {
                     var parser = new DOMParser();
@@ -50,12 +51,22 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         }
         function updateOnlineUserList(xmlDoc) {
 
+            clearUserList();
+
             //point to the user nodes
             var users = xmlDoc.getElementsByTagName("user");
 
             for (var i = 0; i < users.length; i++) {
                 var user = users.item(i);
                 showUserList(user.getAttribute("name"), user.getAttribute("pic-upload"));
+            }
+        }
+
+        function clearUserList() {
+            var node = document.getElementById("onlinelist");
+            // remove all child
+            while (node.hasChildNodes()) {
+                node.removeChild(node.lastChild);
             }
         }
 

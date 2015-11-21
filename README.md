@@ -1,7 +1,7 @@
 ## COMP 4021 Chat Room Project
 ##### SUBMISSION: 23:59 Nov 29th 2015
 
-1. [ ] Basic system chat issues - 12 Marks
+1. [x] Basic system chat issues - 12 Marks
 2. [x] User Name Checking - 10 Marks
 	1. [x] Empty name check - 5 marks
     2. [x] Illegal character check - 5 marks
@@ -20,9 +20,9 @@
 7. [x] Automatic Hyperlink - 14 Marks
  	1. [x] Hyperlink displayd as underlined - 6 marks
     2. [x] Click and display in new window - 8 marks
-8. [ ] Online User List - 18 Marks
+8. [x] Online User List - 18 Marks
 	1. [x] Click on a button to show user list - 2 marks
     2. [x] List is shown in new window - 4 marks
     3. [x] List by their names - 5 marks
     4. [x] List by uploaded pics also - 7 marks
-    5. [ ] Updated when log in or out of the chatroom
+    5. [x] Updated when log in or out of the chatroom

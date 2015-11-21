@@ -38,7 +38,6 @@ a:hover:before {
      color: #e5ccff;
 }
 
-
 .oneEntry {
     margin: 5px;
 }
@@ -46,10 +45,23 @@ a:hover:before {
 .nameEntry{
     display: inline-block;
     margin-right: 10px;
-
 }
 
 .msgEntry{
+    display: inline-block;
+}
+
+.oneUserList {
+    margin: 5px;
+    background-color: red;
+}
+
+.picEntry{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.onlineNameEntry{
     display: inline-block;
 }
 
