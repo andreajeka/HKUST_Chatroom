@@ -63,7 +63,7 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
         <table border="0" cellspacing="5" cellpadding="0">
             <tr>
                 <td>
-                    <form onsubmit="window.open('userlist.php','newWindow','width=450,height=550')">
+                    <form onsubmit="window.open('userlist.php','newWindow','width=512,height=720')">
                         <input class="button onlinelist" type="submit" value="Show Online User List" style="width: 200px"/>
                     </form>
                 </td>

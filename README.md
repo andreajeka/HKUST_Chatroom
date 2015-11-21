@@ -18,7 +18,7 @@
     3. [x] Message displayed in color - 10 mark
     4. [x] Default color is the first color in GUI
 7. [x] Automatic Hyperlink - 14 Marks
- 	1. [x] Hyperlink displayd as underlined - 6 marks
+ 	1. [x] Hyperlink displayed as underlined - 6 marks
     2. [x] Click and display in new window - 8 marks
 8. [x] Online User List - 18 Marks
 	1. [x] Click on a button to show user list - 2 marks

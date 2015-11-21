@@ -53,6 +53,11 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 
             clearUserList();
 
+            var node = document.getElementById("onlinelist");
+            var title = document.createElement("h1");
+            title.appendChild(document.createTextNode("Online User List"));
+            node.appendChild(title);
+
             //point to the user nodes
             var users = xmlDoc.getElementsByTagName("user");
 
@@ -83,8 +88,8 @@ print "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             picNode.setAttribute("class", "picEntry");
             var image = document.createElement("img");
             image.src = pictureStr;
-            image.setAttribute("height", 200);
-            image.setAttribute("width", 200);
+            image.setAttribute("height", 100);
+            image.setAttribute("width", 100);
             picNode.appendChild(image);
             oneUserListNode.appendChild(picNode);
 

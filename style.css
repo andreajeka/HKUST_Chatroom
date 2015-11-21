@@ -47,22 +47,43 @@ a:hover:before {
     margin-right: 10px;
 }
 
+h1{
+    position: relative;
+    left: -170px;
+}
+
+img {
+    border-radius: 50%;
+    border: 5px solid #BADA55;
+}
+
 .msgEntry{
     display: inline-block;
 }
 
 .oneUserList {
-    margin: 5px;
-    background-color: red;
+    position:relative;
+    top: 30px;
+    height: 100px;
+    margin-bottom: 30px;
 }
 
 .picEntry{
-    display: inline-block;
-    margin-right: 10px;
+    display:block;
+    position:relative;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    float:left;
+    border-radius:100%;
+    margin-bottom: 10px;
 }
 
 .onlineNameEntry{
-    display: inline-block;
+    display: block;
+    position:relative;
+    top: 45px;
+    left: -150px;
 }
 
 form {
