@@ -1,0 +1,1 @@
+This is just a placebo text so that I can put the empty images folder into the zip file. For more information why, please read readme.txt
