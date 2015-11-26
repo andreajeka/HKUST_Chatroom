@@ -31,8 +31,14 @@ if($user_element != null) {
     // delete the current user from the users element
     foreach ($user_element as $user) {
         $username = $xmlh->getAttribute($user, "name");
-        if ($username == $name)
+        if ($username == $name) {
+            // Remove picture from our images folder
+            $uploadpic = $xmlh->getAttribute($user, "pic-upload");
+            unlink($uploadpic);
+
+            // Remove the user element completely
             $xmlh->removeElement($users_element, $user);
+        }
     }
 }
 

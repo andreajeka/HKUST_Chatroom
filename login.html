@@ -18,6 +18,7 @@
         //username input checking
        function checkInput() {
            var nameInput = document.forms[0]["name"].value;
+           
            // username cannot be empty
            if (nameInput.length == 0) {
                alert("Please enter a name!");
@@ -32,7 +33,8 @@
            }
 
            // user has to upload a picture
-           var upload = document.forms[0]["file-upload"].value;
+           var upload = document.forms[0]["pic-upload"].value;
+           console.log(upload);
            if (upload == "") {
               alert("Please upload a photo!");
               return false;
